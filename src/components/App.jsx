@@ -16,6 +16,13 @@ export class App extends Component {
     return good + neutral + bad;
   };
 
+  countpositiveFeedbackPercentage = () => {
+    const { good } = this.state;
+    const total = this.countTotalFeedback;
+
+    return total === 0 ? 0 : Math.round((good / total) * 100);
+  };
+
   handleClick = type => {
     this.setState(prevState => ({
       ...prevState,
@@ -26,8 +33,7 @@ export class App extends Component {
   render() {
     const { good, neutral, bad } = this.state;
     const total = this.countTotalFeedback();
-    const positivePercentage =
-      total === 0 ? 0 : Math.round((good / total) * 100);
+    const positivePercentage = this.countPositiveFeedbackPercentage();
     const options = ['good', 'neutral', 'bad'];
 
     return (
