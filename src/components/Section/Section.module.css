@@ -1,0 +1,17 @@
+/* styles.css */
+
+.section-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px;
+  width: 400px;
+}
+
+.section-container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.section-content {
+  /* Add any additional styling for the section content */
+}

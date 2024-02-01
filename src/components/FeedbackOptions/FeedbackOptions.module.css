@@ -1,0 +1,18 @@
+
+
+.statistics-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  text-align: left;
+}
+
+.statistics-container h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.statistics-container p {
+  margin: 8px 0;
+}
