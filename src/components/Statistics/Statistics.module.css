@@ -1,0 +1,9 @@
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.value {
+  margin-left: 5px;
+  font-weight: normal;
+}
