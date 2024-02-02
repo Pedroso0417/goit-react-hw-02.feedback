@@ -3,6 +3,7 @@ import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Section } from './Section/Section';
 import { Notification } from './Notification/Notification';
+import { render } from 'react-dom';
 
 export class App extends Component {
   state = {
@@ -16,11 +17,9 @@ export class App extends Component {
     return good + neutral + bad;
   };
 
-  countpositiveFeedbackPercentage = () => {
-    const { good } = this.state;
-    const total = this.countTotalFeedback;
-
-    return total === 0 ? 0 : Math.round((good / total) * 100);
+  countPositiveFeedbackPercentage = () => {
+    const total = this.countTotalFeedback();
+    return total === 0 ? 0 : Math.round((this.state.good / total) * 100);
   };
 
   handleClick = type => {
@@ -62,3 +61,5 @@ export class App extends Component {
     );
   }
 }
+
+render(<App />, document.getElementById('root'));
