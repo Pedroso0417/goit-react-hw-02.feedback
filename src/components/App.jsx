@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Section } from './Section/Section';
@@ -17,8 +17,10 @@ export class App extends Component {
   };
 
   countPositiveFeedbackPercentage = () => {
+    const { good } = this.state;
     const total = this.countTotalFeedback();
-    return total === 0 ? 0 : Math.round((this.state.good / total) * 100);
+
+    return total > 0 ? Math.round((good / total) * 100) : 0;
   };
 
   handleClick = type => {
