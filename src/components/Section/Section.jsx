@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import css from './Section.module.css';
 export const Section = ({ title, children }) => {
   return (
-    <Section>
+    <section>
       <h2 className={css.sectionTitle}>{title}</h2>
       {children}
-    </Section>
+    </section>
   );
 };
 
